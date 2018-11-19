@@ -1,0 +1,148 @@
+.foto-home {
+    height: 10rem;
+    border-radius: 100px;
+    box-shadow: 0 0 1em #000;
+}
+.saudacao p {
+    font-size: 1em;
+    color: #99A;
+    line-height: 1;
+    padding: 1em;
+}
+.saudacao em {
+    color: #851944;
+    font-size: 4em;
+    transform:  rotate(-5deg) skew(-10deg);
+    display: inline-block;
+}
+.saudacao-inicio {
+    font-size: 1.5em;
+    color: #889;
+}
+.saudacao-ultima-linha {
+    text-align: right;
+    display: block;
+}
+.saudacao strong {
+    font-size: 2em;
+    color: #000;
+}
+.saudacao em {
+    color: #851944;
+    font-size: 4em;
+}
+.botao-index {
+    font-size: 1.25rem;
+    background-color: #851944;
+    color: #FFF;
+    padding: .5em;
+    border: .2em solid black;
+    width: 40ch;
+    margin: 2em auto;
+    display: block;
+    text-align: center;
+    box-shadow: 0 0 1em #000, inset 0 0 .5em #FFF;
+}
+.secao-inicio {
+    padding: 2em;
+}
+.secao-inicio h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    text-shadow: 5px 5px #000000;
+}
+.trabalhos {
+    background-color: #3C1D3D;
+    border-top: .5em solid #000;
+    border-bottom: .5em solid #000;
+}
+.trabalhos h2 {
+    color: #FFF;
+}
+.trabalhos ul {
+    overflow: hidden;
+    border: .5em solid black;
+}
+.trabalhos li {
+    float: left;
+    width: 33.333%;
+}
+.trabalhos img {
+    width: 100%;
+    display: block;
+}
+.blog {
+    background-color: #999;
+    color: #FFF;
+    border-bottom: .5em solid #851944;
+    position: relative;
+}
+.blog small {
+    position: relative;
+    top: -2em;
+}
+.blog li a {
+    color: #FCF;
+    padding: .5em;
+    display: block;
+}
+footer {
+    background-color: #000;
+    color: #FFF;
+    padding: 2em;
+}
+footer h2 {
+    font-size: 3em;
+}
+footer a {
+    color: #F99;
+}
+main {
+    width: 100%;
+    padding-bottom: 0;
+    float: none;
+}
+
+.blog .inicio-post {
+    position: absolute;
+    top: 4rem;
+    height: 8rem;
+    left: 30%;
+    right: 4rem;
+    background-color: #F2FFFC;
+    color: #000;
+    padding: 1.5rem;
+}
+.blog .mais-rescente{
+    background-color: #F2FFFC;
+}
+.blog li a {
+    color: rgb(0, 68, 255);
+}
+.blog li {
+    width: 30%;
+    
+}
+.banner-twitter {
+    width: 14rem;
+    line-height: 1;
+    padding: 1rem 0;
+    box-sizing: border-box;
+
+    text-align: center;
+    text-decoration: none;
+    background-color: #3C1D3D;
+    color: white;
+    border: .25rem solid black;
+
+    font-size: 1.2rem;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+.banner-twitter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: 0 0;
+    transform: translate(6.5754rem, -2.4749rem) rotate(45deg);
+}
