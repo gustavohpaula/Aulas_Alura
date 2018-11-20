@@ -31,3 +31,11 @@
 body {
     overflow: scroll;
 }
+#erroMensagem{
+    color: red;
+    display: none;
+}
+
+#spinner{
+    display: none;
+}
