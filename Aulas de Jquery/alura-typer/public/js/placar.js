@@ -35,7 +35,7 @@ function removeLinha()
 {
     event.preventDefault();
     var linha =  $(this).parent().parent();
-    linha.fadeout(1000);
+    linha.fadeOut(1000);
     setTimeout(() => {
         linha.remove();
     }, 1000);
@@ -75,4 +75,14 @@ function sincronizaPlacar(){
        console.log("salvou o placar");
 
    });
+}
+
+function atualizaPlacar(){
+    $.get("http://localhost:3000/placar", function(data){
+        $(data).each(function(){
+            var linha = novaLinha(this.usuario, this.pontos);
+            linha.find(".botao-remover").click(removeLinha);
+            $("tbody").append(linha);
+        })
+    })
 }
