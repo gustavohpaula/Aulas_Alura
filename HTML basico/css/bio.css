@@ -1,18 +1,155 @@
- .citacao-bio {
+h1{
+   
+    animation: aparece 2s ease-in;
+}
+@keyframes aparece{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.citacao-bio {
+    
     background-color: #D9E5E3;
     border: .5em solid #C2CCCA;
     padding: 1em;
     margin: 1em 2em;
     width: 30ch;
     box-sizing: border-box;
+    transition: transform 1s linear, box-shadow 1s ease-out;
+    transition-delay: 0s, 1s;
+    position: relative;
+    -webkit-animation: quica 1s infinite;
+    animation: quica 1s infinite;
 }
-
-.petrobras {
+@-webkit-keyframes quica {
+    from {
+        top: 0;
+    }
+    90% {
+        transform: rotate(-2deg);
+    }
+    95% {
+        transform: rotate(2deg);
+    }
+    to {
+        top: 1 em;
+    }
+}
+.citacao-bio {
+    ...
+    position: relative;
+    -webkit-animation: quica 1s infinite;
+    animation: quica 1s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+.citacao-bio:nth-of-type(even) {
     float: left;
     margin-left: 0;
 }
 
-.fiat {
+.citacao-bio:nth-of-type(odd) {
     float: right;
     margin-right: 0;
+}
+
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+}
+
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.container > p::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
+    margin-right: .2ch;
+    line-height: 1;
+}
+.citacao-bio::before {
+    content: '“';
+    position: absolute;
+    margin-top: 1px;
+    font-size: 10em;
+    color: #bbb;
+}
+
+.citacao-bio > p {
+    position: relative;
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(.5em) rotate(45deg);
+}
+.icones-redes-sociais a {
+    position: relative;
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-indent: 0;
+    width: 300%;
+    background: black;
+    font-size: .75em;
+}
+.habilidades th {
+    font-weight: bold;
+    background-color: #851944;
+    color: white;
+}
+
+.habilidades td {
+    background-color: #eee;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+.habilidades thead th {
+    /* não precisamos colocar font-weight e color
+       pois já fizemos isso para todos os th */
+      background-color: #3C1D3D;
+  }
+.habilidades th,
+.habilidades td {
+    padding: 1em;
+}
+
+.habilidades {
+    border-collapse: separate;
+    border-spacing: .25em;
+    margin: 1em 0;
 }

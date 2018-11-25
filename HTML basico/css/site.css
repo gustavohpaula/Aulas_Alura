@@ -14,7 +14,7 @@ h2,
 h1 {
     text-transform: uppercase;
     font-size: 3em;
-    text-shadow: 5px 5px #000000;
+    text-shadow: 3px 3px #000;
 }
 
 .titulo-principal {
@@ -34,16 +34,24 @@ main a {
     color: #851944;
 }
 
+main a:hover,
+main a:focus,
+footer a:focus,
+footer a:hover {
+    color: red;
+}
+
 main p {
     text-align: justify;
     margin: 1em 0;
 }
 
 .navegacao-site {
+    width: calc(0.9 * 300px);
     text-align: center;
     background-color: #3C1D3D;
     color: #F2FFFC;
-    padding: .5rem;
+    padding: 1em;
 }
 
 .navegacao-site a {
@@ -52,28 +60,41 @@ main p {
     text-transform: lowercase;
 }
 
+.navegacao-site a:hover,
+.navegacao-site a:focus {
+    text-shadow: 0 0 2px pink;
+}
+
 .navegacao-site h1 {
     font-size: 1.5em;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 .rodape-pagina {
-    background-color: rgba(0,0,0, .3);
-    color: rgb(0, 0, 0);
-    padding: 1rem;
+    color: #F2FFFC;
+    padding: 1em;
     clear: both;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px black;
+    background-image: radial-gradient(ellipse at left bottom,
+        rgba(60, 29, 61, 0.8),
+        rgba(60, 29, 61, 0.8) 65%,
+        black 65%,
+        black 70%,
+        transparent 70%);
+    background-size: 25% 100%;
 }
 
 .container {
-    width: 36rem;
+    width: 80ch;
     margin-left: auto;
     margin-right: auto;
-    padding: 1.5rem 0;
+    padding: 1.5em 0;
 }
 
 strong {
@@ -89,8 +110,8 @@ em {
 }
 
 .icones-redes-sociais a {
-    width: 2em;
-    height: 2em;
+    width: 40px;
+    height: 40px;
     display: block;
     text-indent: -99999px;
 }
@@ -108,15 +129,15 @@ em {
 }
 
 main {
-    width: 80%;
+    width: calc(100% - 0.9 * 300px);
     float: left;
-    padding-bottom: 4rem;
+    padding-bottom: 4em;
 }
 
 .minha-foto,
 .navegacao-site {
     border-left: .5em solid black;
-    border-bottom: .4em solid black;
+    border-bottom: .5em solid black;
     box-sizing: border-box;
 }
 
@@ -124,12 +145,95 @@ main {
     width: 20%;
     float: right;
     position: relative;
-    top: 16rem;
+    top: 300px;
 }
 
 .minha-foto {
     position: absolute;
     top: 0;
     right: 0;
-    height: 16rem;
+    height: 300px;
+}
+
+legend,label[for="mensagem"] {
+    font-weight: bold;
+    margin-top: 1em;
+}
+label[for] {
+    display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    /* Força o navegador a usar a mesma fonte da página */
+    font-family: inherit;
+    /* Inclusive o tamanho dela */
+    font-size: 100%;
+    padding: .25em .5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+fieldset > fieldset {
+    display: inline;
+}
+label[for="outro"] {
+    display: inline;
+}
+input[name="outro-assunto"] {
+    width: auto;
+}
+input:focus,
+textarea:focus {
+    background-color: #FFD;
+}
+input:invalid {
+    box-shadow: 0 0 3px red;
+}
+button {
+    /* Precisamos tirar a borda que o navegador coloca por padrão */
+    border: 0;
+    padding: .5em 1em;
+    font-family: "Open Sans Condensed", sans-serif;
+    background-color: #3C1D3D;
+    color: white;
+    font-size: 1.2em;
+    /* Faz com que o botão apareça na direita */
+    margin-left: auto;
+    margin-top: 1em;
+    display: block;
+}
+button:hover,
+button:focus {
+    background-color: #8C1D3D;
+}
+input[value="Outro"] ~ input {
+    display: none;
+}
+input[value="Outro"]:checked ~ input {
+    display: inline;
+}
+
+label[for="nome"] {
+    position: relative;
+}
+
+label[for="nome"]:after {
+    content: "";
+    background-color: #666;
+    background-repeat: no-repeat;
+    background-image: url("../imagens/usuario.png");
+    background-size: 50% 50%;
+    width: 2em;
+    height: 2em;
+    background-position: center;
+    position: absolute;
+    top: 100%;
+    left:0;
+}
+
+#nome {
+    width: calc(100% - 2em);
+    position: relative;
+    left: 2em;
 }
