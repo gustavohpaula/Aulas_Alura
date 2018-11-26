@@ -28,6 +28,7 @@ var criaJogo = function(sprite){
     };
 
     var processaChute = function(chute){
+        if(!chute.trim()) throw Error('chute Invalido');
         var exp = new RegExp(chute, 'gi'),
         resultado,
         acertou = false;
@@ -48,6 +49,7 @@ var criaJogo = function(sprite){
         etapa = 2;
     };
     var setPalavraSecreta = function(palavra){
+        if(!palavra.trim()) throw Error('Palavra Invalida');
         palavraSecreta = palavra;
         criaLacunas();
         proximaEtapa();
