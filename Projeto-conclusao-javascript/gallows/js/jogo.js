@@ -13,7 +13,7 @@ var criaJogo = function(sprite){
     };
 
     var perdeu = function () {
-       return sprite.isFinished();
+        return sprite.isFinished();
     };
 
     var ganhouOuPerdeu = function () {

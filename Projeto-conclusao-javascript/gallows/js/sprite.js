@@ -18,7 +18,7 @@ var createSprite = function(selector){
 
         moveFrame (frames[current], frames[0]);
     };
-    var isfinished = function(){
+    var isFinished = function(){
         return !hasNext();
     };
 
@@ -38,6 +38,6 @@ var createSprite = function(selector){
     return {
         nextFrame: nextFrame,
         reset: reset,
-        isfinished: isfinished
+        isFinished: isFinished
     };
 };
