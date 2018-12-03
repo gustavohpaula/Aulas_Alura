@@ -38,7 +38,7 @@ var criaJogo = function(sprite){
         };
 
         if(!acertou){
-            sprite.nexteFrame();
+            sprite.nextFrame();
         };
     };
 

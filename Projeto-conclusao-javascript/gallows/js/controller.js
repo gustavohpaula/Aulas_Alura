@@ -46,11 +46,9 @@ var criaController = function(jogo){
                     } else if (jogo.perdeu()){
                         alert('ae rapaz, perdeu feio viu');
                     }
-
+                    reinicia();
                 }, 200);
                 
-
-                reinicia();
             
             }
         } catch(err){
