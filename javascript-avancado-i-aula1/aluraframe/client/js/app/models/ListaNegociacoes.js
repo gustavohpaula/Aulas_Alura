@@ -21,4 +21,10 @@ class ListaNegociacoes {
         this._negociacoes = [];
         this._armadilha = this;
     }
+    ordena(criterio) {
+        this._negociacoes.sort(criterio);        
+    }
+    inverteOrdem(){
+        this._negociacoes.reverse();
+    }
 }
